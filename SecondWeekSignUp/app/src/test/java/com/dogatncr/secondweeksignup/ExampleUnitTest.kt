@@ -1,4 +1,4 @@
-package secondweeksignup
+package com.dogatncr.secondweeksignup
 
 import org.junit.Test
 

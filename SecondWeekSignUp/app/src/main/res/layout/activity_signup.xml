@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context="com.dogatncr.secondweeksignup.SignUpActivity">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -14,6 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageButton
+            android:id="@+id/backArrow"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_baseline_arrow_back"
@@ -100,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/background_edittext_radius_with_10_dp"
-                android:inputType="textEmailAddress" />
+                android:inputType="textPassword" />
 
             <ImageView
                 android:id="@+id/SignUpShowPassword"
@@ -137,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@drawable/background_edittext_radius_with_10_dp"
-                android:inputType="textEmailAddress" />
+                android:inputType="textPassword" />
 
             <ImageView
                 android:id="@+id/SignUpShowPassword2"
