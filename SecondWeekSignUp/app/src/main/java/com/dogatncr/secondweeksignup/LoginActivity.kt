@@ -11,6 +11,7 @@ import android.widget.ImageView
 
 
 class LoginActivity : AppCompatActivity() {
+    //variable definition
     private lateinit var ivChangePasswordVisibility: ImageView
     private lateinit var passwordEditText: EditText
     private lateinit var LoginBtn : Button
@@ -22,11 +23,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //accessing view elements
         ivChangePasswordVisibility  = findViewById(R.id.ivShowPassword)
         passwordEditText  = findViewById(R.id.etPassword)
         LoginBtn = findViewById(R.id.btnLogin)
         SignUpBtn = findViewById(R.id.btnSignUp)
 
+        //setting up visibility button listeners
         ivChangePasswordVisibility.setOnClickListener {
             if (isVisibilityOn) {
                 ivChangePasswordVisibility.setImageResource(R.drawable.ic_baseline_visibility_24)
@@ -43,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
             // todo login method will be implemented
 
         }
+        //setting up sign up button which navigates to sign up activity
         SignUpBtn.setOnClickListener {
             val signUpIntent = Intent(this, SignUpActivity::class.java)
             startActivity(signUpIntent)

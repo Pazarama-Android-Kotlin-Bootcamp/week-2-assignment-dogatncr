@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class SignUpActivity : AppCompatActivity() {
+    //variable definition
     private lateinit var SignUpChangePasswordVisibility: ImageView
     private var isVisibilityOn = false
     private lateinit var SignUpChangePasswordVisibility2 : ImageView
@@ -23,13 +24,14 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+        //accessing view elements
         SignUpChangePasswordVisibility  = findViewById(R.id.SignUpShowPassword)
         SignUpChangePasswordVisibility2  = findViewById(R.id.SignUpShowPassword2)
         SignUpPasswordVisibility = findViewById(R.id.SignUpPassword)
         SignUpPasswordVisibility2 = findViewById(R.id.SignUpPassword2)
         arrowBackicon = findViewById(R.id.backArrow)
 
-
+        //setting up visibility button listeners
         SignUpChangePasswordVisibility.setOnClickListener {
             if (isVisibilityOn) {
                 SignUpChangePasswordVisibility.setImageResource(R.drawable.ic_baseline_visibility_24)
@@ -52,6 +54,8 @@ class SignUpActivity : AppCompatActivity() {
                 isVisibilityOn2 = true
             }
         }
+
+        //go back button which triggers back button press
         arrowBackicon.setOnClickListener {
             super.onBackPressed()
         }
